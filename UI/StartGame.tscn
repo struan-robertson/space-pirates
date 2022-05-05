@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/StartGame.gd" type="Script" id=1]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 0.99987, 0.999756 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="VBoxContainer" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -87.0
+margin_top = -150.0
+margin_bottom = -64.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_scale = Vector2( 3, 3 )
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/HBoxContainer"]
+margin_right = 87.0
+margin_bottom = 14.0
+text = "Space Pirates"
+align = 1
+
+[node name="Button" type="Button" parent="Control/HBoxContainer"]
+margin_top = 18.0
+margin_right = 87.0
+margin_bottom = 38.0
+text = "New Game"
+
+[node name="Button2" type="Button" parent="Control/HBoxContainer"]
+margin_top = 42.0
+margin_right = 87.0
+margin_bottom = 62.0
+text = "How to Play"
+
+[node name="Button3" type="Button" parent="Control/HBoxContainer"]
+margin_top = 66.0
+margin_right = 87.0
+margin_bottom = 86.0
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Control/HBoxContainer/Button" to="Control" method="_on_Button_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/Button2" to="Control" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/Button3" to="Control" method="_on_Button3_pressed"]
